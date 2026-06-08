@@ -13,7 +13,7 @@ export default function Login() {
 
     try {
       await axios.post(
-        "http://localhost:5000/login",
+        "http://3.91.251.121:5000/login",
         { email, password },
         { withCredentials: true }
       );

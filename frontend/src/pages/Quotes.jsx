@@ -16,7 +16,7 @@ export default function Quotes() {
 
   const loadQuotes = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/quotes", {
+      const response = await axios.get("http://3.91.251.121:5000/quotes", {
         withCredentials: true,
       });
 
@@ -34,13 +34,13 @@ export default function Quotes() {
     try {
       if (editingId) {
         await axios.put(
-          `http://localhost:5000/quotes/${editingId}`,
+          `http://3.91.251.121:5000/quotes/${editingId}`,
           { text, author, tags },
           { withCredentials: true }
         );
       } else {
         await axios.post(
-          "http://localhost:5000/quotes",
+          "http://3.91.251.121:5000/quotes",
           { text, author, tags },
           { withCredentials: true }
         );
@@ -64,7 +64,7 @@ export default function Quotes() {
 
   const deleteQuote = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/quotes/${id}`, {
+      await axios.delete(`http://3.91.251.121:5000/quotes/${id}`, {
         withCredentials: true,
       });
 
@@ -87,7 +87,7 @@ export default function Quotes() {
   const logout = async () => {
     try {
       await axios.post(
-        "http://localhost:5000/logout",
+        "http://3.91.251.121:5000/logout",
         {},
         { withCredentials: true }
       );
@@ -122,7 +122,7 @@ export default function Quotes() {
     const timer = setTimeout(async () => {
       try {
         await axios.put(
-          `http://localhost:5000/quotes/${editingId}`,
+          `http://3.91.251.121:5000/quotes/${editingId}`,
           { text, author, tags },
           { withCredentials: true }
         );

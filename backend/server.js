@@ -9,7 +9,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "http://3.91.251.121",
     credentials: true,
   })
 );
@@ -193,7 +193,7 @@ app.put("/quotes/:id", (req, res) => {
   );
 });
 
-app.listen(5000, () => {
+app.listen(5000, "0.0.0.0", () => {
   console.log("Server running on port 5000");
 });
 
